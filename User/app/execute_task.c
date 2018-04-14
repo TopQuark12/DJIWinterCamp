@@ -55,11 +55,13 @@ float arm_pid_calc(pid_t *pid, float get, float set)
   return pid->out;
 }
 
+//C620 + 3508 		(20000, 50000, 10, 0.02, 600)
+//C610 + 2006		(10000, 20000, 10, 0.2, 2000)
 
 void execute_task(const void* argu)
 {
 
-	pid_init(&arm_pid, 20000, 100000, kP, kI, kD);
+	pid_init(&arm_pid, 20000, 50000, 10, 0.02, 600);
 	target_pos = 0;
 
   while (1)
