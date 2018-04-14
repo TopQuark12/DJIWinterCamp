@@ -1,0 +1,22 @@
+--cpu=Cortex-M4.fp
+".\rm_infantry\can_device.o"
+".\rm_infantry\uart_device.o"
+".\rm_infantry\calibrate.o"
+".\rm_infantry\keyboard.o"
+".\rm_infantry\pid.o"
+".\rm_infantry\ramp.o"
+".\rm_infantry\startup.o"
+".\rm_infantry\gimbal_task.o"
+".\rm_infantry\chassis_task.o"
+".\rm_infantry\detect_task.o"
+".\rm_infantry\execute_task.o"
+".\rm_infantry\chassis_custom.o"
+".\rm_infantry\gimbal_custom.o"
+".\rm_infantry\shoot_custom.o"
+".\rm_infantry\test_custom.o"
+".\rm_infantry\stm32f4xx_it.o"
+"..\Inc\rm_infantry1_2.lib"
+--strict --scatter ".\rm_infantry\rm_infantry.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\output\rm_infantry.map" -o .\rm_infantry\rm_infantry.axf

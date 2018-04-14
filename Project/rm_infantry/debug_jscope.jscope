@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<JScopeProject>
+    <FileVersion major="1" minor="1" />
+    <Project>
+        <Configuration>
+            <JLink>
+                <Options IsRTTSession="0" IsRTTWithTimeStamp="1" SamplingPeriod="100" Connection="1" SerialNo="0" IP="" TargetDevice="STM32F427II" TargetInterface="SWD" InterfaceSpeed="4000" />
+            </JLink>
+            <ElfFile Name="C:\Users\richard.luo\Desktop\middle_school\MDK-ARM\rm_infantry\rm_infantry.axf" />
+            <DataFile Name="" />
+            <RawFile Name="" />
+            <Scope>
+                <Options TimeResolutionUs="1000000" />
+            </Scope>
+        </Configuration>
+        <Windows>
+            <Graph Show="1" />
+            <Watch Show="1" />
+        </Windows>
+        <SelectedSymbols>
+            <Symbol>
+                <Options Name="pit_p_fdb" Address="0x20000118" Type="int" TypeID="12" Size="4" GraphColorRed="255" GraphColorGreen="215" GraphColorBlue="0" YMinSampled="-3551" YMaxSampled="1623737112" YAvgSampled="0" Offset="4" ShowInGraph="1" YOffset="200" IsAutoConfig="0" YResolution="1000" MaxValue="4000" File="app\gimbal_task.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="pit_p_ref" Address="0x2000011C" Type="int" TypeID="12" Size="4" GraphColorRed="0" GraphColorGreen="255" GraphColorBlue="0" YMinSampled="-1120919551" YMaxSampled="1500" YAvgSampled="0" Offset="8" ShowInGraph="1" YOffset="200" IsAutoConfig="1" YResolution="1000000000" MaxValue="2000000000" File="app\gimbal_task.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="pit_s_fdb" Address="0x20000120" Type="int" TypeID="12" Size="4" GraphColorRed="0" GraphColorGreen="0" GraphColorBlue="255" YMinSampled="-37774" YMaxSampled="1293268336" YAvgSampled="-7" Offset="12" ShowInGraph="0" YOffset="200" IsAutoConfig="1" YResolution="20000" MaxValue="40000" File="app\gimbal_task.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="pit_s_ref" Address="0x20000124" Type="int" TypeID="12" Size="4" GraphColorRed="160" GraphColorGreen="32" GraphColorBlue="240" YMinSampled="-175563" YMaxSampled="143203529" YAvgSampled="0" Offset="16" ShowInGraph="0" YOffset="200" IsAutoConfig="0" YResolution="20000" MaxValue="200000" File="app\gimbal_task.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="yaw_p_fdb" Address="0x20000108" Type="int" TypeID="12" Size="4" GraphColorRed="255" GraphColorGreen="0" GraphColorBlue="0" YMinSampled="-10095" YMaxSampled="1134586120" YAvgSampled="0" Offset="20" ShowInGraph="0" YOffset="200" IsAutoConfig="1" YResolution="10000" MaxValue="20000" File="app\gimbal_task.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="yaw_p_ref" Address="0x2000010C" Type="int" TypeID="12" Size="4" GraphColorRed="0" GraphColorGreen="191" GraphColorBlue="255" YMinSampled="-10924" YMaxSampled="1757962504" YAvgSampled="0" Offset="24" ShowInGraph="0" YOffset="200" IsAutoConfig="1" YResolution="10000" MaxValue="20000" File="app\gimbal_task.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="yaw_s_fdb" Address="0x20000110" Type="int" TypeID="12" Size="4" GraphColorRed="0" GraphColorGreen="100" GraphColorBlue="0" YMinSampled="-45501" YMaxSampled="251659776" YAvgSampled="-4" Offset="28" ShowInGraph="0" YOffset="200" IsAutoConfig="0" YResolution="10000" MaxValue="40000" File="app\gimbal_task.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="yaw_s_ref" Address="0x20000114" Type="int" TypeID="12" Size="4" GraphColorRed="205" GraphColorGreen="133" GraphColorBlue="63" YMinSampled="-280087" YMaxSampled="1757990915" YAvgSampled="0" Offset="32" ShowInGraph="0" YOffset="200" IsAutoConfig="0" YResolution="10000" MaxValue="200000" File="app\gimbal_task.c" Scope="0" DrawStyle="0" />
+            </Symbol>
+        </SelectedSymbols>
+    </Project>
+</JScopeProject>

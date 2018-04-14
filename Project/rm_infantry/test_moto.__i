@@ -1,0 +1,6 @@
+-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\Inc\hal_inc -I ..\Inc\m3_inc -I ..\Inc\os_inc -I ..\Inc\hal_inc\Legacy -I ..\User -I ..\User\algorithm -I ..\User\app -I ..\User\driver --C99
+-I E:\Genius\config\users\xavier.fan@djiimap01-in\filerecv\winter_camp(1)\winter_camp\Project\RTE
+-I E:\keil\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+-I E:\keil\ARM\CMSIS\Include
+-D__UVISION_VERSION="520" -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99
+-o .\rm_infantry\test_moto.o --omf_browse .\rm_infantry\test_moto.crf --depend .\rm_infantry\test_moto.d "test_moto.c"
