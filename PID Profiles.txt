@@ -1,0 +1,6 @@
+//C620 + 3508 		(20000, 50000, 10, 0.02, 600)
+//C610 + 2006		(10000, 20000, 10, 0.2, 2000)
+
+1ms period
+
+position loop, controlling rotor degree

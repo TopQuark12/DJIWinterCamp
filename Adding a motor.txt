@@ -1,0 +1,70 @@
+Alex Wong 16/3/2018
+
+Note to self: How to add a CAN motor for RM Winter Camp
+
+
+
+Motor name = moto_arm
+CAN_ARM_MOTOR_ID	   = 0x208,
+
+
+
+In can_device.h :
+-	Define 
+		CAN_ARM_MOTOR_ID	   = 0x208,
+	in can_msg_id_e enum
+
+-	Declare 
+		extern moto_measure_t moto_arm;
+
+-	Declare 
+		void send_arm_moto_zero_current(void);
+		void send_arm_moto_current(int16_t arm_current);
+
+
+In can_device.c :
+-	Declare
+		moto_measure_t moto_arm;
+
+-	Process CAN CAN_ARM_MOTOR_ID call back in can1_recv_callback, add : 
+		case CAN_ARM_MOTOR_ID:
+	    {
+	      moto_arm.msg_cnt++;
+	      moto_arm.msg_cnt <= 10 ? get_moto_offset(&moto_arm, data) : encoder_data_handle(&moto_arm, data);
+	      err_detector_hook(TRIGGER_MOTO_OFFLINE);
+	    }
+	    break;	
+
+-	define motor stop function
+		void send_arm_moto_zero_current(void)
+		{
+		  static uint8_t data[8];
+		  
+		  data[0] = 0;
+		  data[1] = 0;
+		  data[2] = 0;
+		  data[3] = 0;
+		  data[4] = 0;
+		  data[5] = 0;
+		  data[6] = 0;
+		  data[7] = 0;
+		  
+		  write_can(GIMBAL_CAN, CAN_GIMBAL_ID, data);
+		}
+
+-	define motor turn function
+		void send_arm_moto_current(int16_t arm_current)
+		{
+		  static uint8_t data[8];
+		  
+		  data[0] = 0;
+		  data[1] = 0;
+		  data[2] = 0;
+		  data[3] = 0;
+		  data[4] = 0;
+		  data[5] = 0;
+		  data[6] = arm_current >> 8;
+		  data[7] = arm_current;
+		  
+		  write_can(GIMBAL_CAN, CAN_GIMBAL_ID, data);
+		}	
